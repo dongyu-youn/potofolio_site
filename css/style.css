@@ -1,0 +1,265 @@
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+  border-bottom: none;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.description {
+  width: 80%;
+}
+
+/* Header */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  background-color: black;
+  justify-content: space-between;
+}
+
+#home {
+  padding-top: 7rem;
+}
+
+.home__avatar {
+  width: 100px;
+  height: 100px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu li {
+  padding: 4px;
+}
+
+.header__menu__item.active {
+  border: 1px solid white;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+}
+
+.skills__coding {
+  grid-row: span 2;
+  background-color: gray;
+}
+
+#skills {
+  background-color: gray;
+}
+
+.max-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.bar {
+  width: 800px;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.bar__metadata {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+  gap: 3px;
+}
+
+.bar__bg {
+  height: 3px;
+
+  background-color: black;
+}
+
+.bar__value {
+  height: 3px;
+  background-color: aqua;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem;
+  gap: 1rem;
+}
+
+.category {
+  padding: 0.5rem 2.5rem;
+  border-radius: 4px;
+  border: 1px solid aqua;
+  background-color: transparent;
+  position: relative;
+}
+
+.category__count {
+  background-color: red;
+  position: absolute;
+  top: -20px;
+  right: 16px;
+  border-radius: 100%;
+  line-height: 28px;
+  width: 28px;
+  height: 28px;
+  opacity: 0;
+  transform: translateY(-20px); /* 요소를 위로 20px 이동 */
+  transition: all 300ms ease-in-out;
+}
+
+.category:hover .category__count {
+  transform: translateY(0); /* 원래 위치로 이동 */
+  opacity: 1;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.project {
+  overflow: hidden;
+  padding: 2rem;
+  position: relative;
+}
+
+.project__metadata {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease-in;
+  transform: translateY(-10px);
+}
+
+.project__metadata:hover {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+
+.testimonials {
+  margin: 3rem;
+}
+
+.testimonial {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.testimonial__img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.testimonial__bubble {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.testimonial__bubble__tag {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial__bubble__name {
+  font-weight: bold;
+}
+
+.testimonial:nth-child(even) .testimonial__img {
+  order: 1;
+}
+
+#contact {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.contact__links {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  font-size: 2rem;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.contact__link {
+  transition: all 250ms ease-in;
+}
+
+.contact__link:hover {
+  color: aqua;
+}
+
+.arrow-up {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: aqua;
+  border-radius: 100%;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
